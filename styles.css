@@ -1,0 +1,323 @@
+/* Externo */
+@font-face {
+    font-family: "rounded";
+    src: url("font/MPLUSRounded1c-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "rounded";
+    src: url("font/MPLUSRounded1c-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "gameboy";
+    src: url("font/Pokemon\ GB.ttf");
+}
+
+
+
+/* Mobile */
+@media only screen and (max-width: 600px) and (orientation: portrait) {
+    /* Geral */
+    body {
+        /* margin: 30px 180px */
+        background-color: rgb(40, 40, 40, 0.8);
+    }
+
+    header {
+        padding-top: 1.2%;
+        background-color: rgba(24, 25, 27, 0.8);
+    }
+
+    header img {
+        display: block;
+        margin: auto;
+        width: 33%;
+    }
+
+    header p {
+        font-family: 'gameboy';
+        color: silver;
+        font-size: 1.25rem;
+        padding: 0.33% 0;
+        background-color: rgba(33, 36, 38, 0.8);
+        text-align: center;
+    }
+
+    header ul {
+        padding: 0.33% 0;
+        background-color: rgba(33, 36, 38, 0.8);
+        display: flex;
+        justify-content: space-evenly;
+        overflow: visible;
+    }
+
+    nav li {
+        list-style: none;
+        display: inline-block;
+        font-family: 'gameboy';
+        color: silver;
+        font-size: 1.25rem;
+    }
+
+    main {
+        padding-left: 3vw;
+        padding-right: 3vw;
+        font-family: 'rounded';
+    }
+    main h1 {
+        font-weight: bold;
+    }
+    main p {
+        text-align: justify;
+    }
+
+    a {
+        color: #ffcd00;
+    }
+
+    a:hover {
+        color: #356abc;
+    }
+
+    a:active {
+        color: white;
+    }
+
+
+    /* Pages */
+    #main {
+        background-image: url(img/main_fundo.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: white;
+    }
+
+
+    #mundo {
+        background-image: url(img/mundo_img.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: white;
+    }
+    #mundo table {
+        margin: auto;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    #mundo th {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    #mundo td {
+        width: 30vw;
+        padding: 1.33% 1.33%;
+        text-align: center;
+        border: 0.2vw solid rgba(255, 255, 255, 0.5);
+    }
+    #mundo .region {
+        width: 27vw;
+        display: block;
+        margin: auto;
+    }
+    #mundo .pais {
+        width: 27vw;
+        display: block;
+        margin: auto;
+    }
+}
+
+
+
+/* Computador */
+@media only screen and (min-width: 601px) {
+    /* Geral */
+    body {
+        /* margin: 30px 180px */
+        margin: 2% 12%; 
+        background-color: rgb(40, 40, 40, 0.8);
+    }
+
+    header {
+        padding-top: 1.2%;
+        background-color: rgba(24, 25, 27, 0.8);
+    }
+
+    header img {
+        display: block;
+        margin: auto;
+        width: 33%;
+    }
+
+    header p {
+        font-family: 'gameboy';
+        color: silver;
+        font-size: 1.25rem;
+        padding: 0.33% 0;
+        background-color: rgba(33, 36, 38, 0.8);
+        text-align: center;
+    }
+
+    header ul {
+        padding: 0.33% 0;
+        background-color: rgba(33, 36, 38, 0.8);
+        display: flex;
+        justify-content: space-evenly;
+        overflow: visible;
+    }
+
+    nav li {
+        list-style: none;
+        display: inline-block;
+        font-family: 'gameboy';
+        color: silver;
+        font-size: 1.25rem;
+    }
+
+    main {
+        padding-left: 3vw;
+        padding-right: 3vw;
+        font-family: 'rounded';
+    }
+    main h1 {
+        font-weight: bold;
+    }
+    main p {
+        text-align: justify;
+    }
+
+    a {
+        color: #ffcd00;
+    }
+
+    a:hover {
+        color: #356abc;
+    }
+
+    a:active {
+        color: white;
+    }
+
+
+    /* Pages */
+    #main {
+        background-image: url(img/main_fundo.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: white;
+    }
+
+
+    #mundo {
+        background-image: url(img/mundo_img.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: white;
+    }
+    #mundo table {
+        margin: auto;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    #mundo th {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    #mundo td {
+        width: 30vw;
+        padding: 1.33% 1.33%;
+        text-align: center;
+        border: 0.2vw solid rgba(255, 255, 255, 0.5);
+    }
+    #mundo .region {
+        width: 27vw;
+        display: block;
+        margin: auto;
+    }
+    #mundo .pais {
+        width: 27vw;
+        display: block;
+        margin: auto;
+    }
+}
+
+
+
+
+
+
+/* Mobile
+@media only screen and (max-width: 600px) {
+    body {
+        margin: 2% 12%;
+        background-color: rgb(40, 40, 40, 0.8);
+    }
+
+    header {
+        padding-top: 18px;
+        background-color: rgba(24, 25, 27, 0.8);
+    }
+
+    header img {
+        display: block;
+        margin: auto;
+    }
+
+    header ul {
+        padding: 5px 0;
+        background-color: rgba(33, 36, 38, 0.8);
+        display: flex;
+        justify-content: space-evenly;
+        overflow: visible;
+    }
+
+    header p {
+        font-family: 'gameboy';
+        color: silver;
+        font-size: 20x;
+        padding: 5px 0;
+        background-color: rgba(33, 36, 38, 0.8);
+        text-align: center;
+    }
+
+    nav li {
+        list-style: none;
+        display: inline-block;
+        font-family: 'gameboy';
+        color: silver;
+        font-size: 20x;
+    }
+
+    main {
+        padding-left: 30px;
+        padding-right: 30px;
+        font-family: 'rounded';
+    }
+    main h1 {
+        font-weight: bold;
+    }
+
+
+    a {
+        color: #ffcd00;
+    }
+
+    a:hover {
+        color: #356abc;
+    }
+
+    a:active {
+        color: white;
+    }
+
+
+
+    #index {
+        background-image: url(img/pikachu.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+    }
+} */
