@@ -16,36 +16,47 @@
     src: url("font/Pokemon\ GB.ttf");
 }
 
+@font-face {
+    font-family: "unown";
+    src: url("font/Unown.ttf");
+}
+
 
 
 /* Mobile */
-@media only screen and (max-width: 600px) and (orientation: portrait) {
+@media only screen and (max-width: 600px) {
     /* Geral */
     body {
         /* margin: 30px 180px */
+        margin: 0; 
         background-color: rgb(40, 40, 40, 0.8);
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
     }
 
+
     header {
+        grid-area: header;
         padding-top: 1.2%;
         background-color: rgba(24, 25, 27, 0.8);
     }
-
     header img {
         display: block;
         margin: auto;
-        width: 33%;
+        width: 50%;
     }
-
     header p {
         font-family: 'gameboy';
         color: silver;
-        font-size: 1.25rem;
-        padding: 0.33% 0;
+        font-size: 4vw;
+        padding-top: 0.33% 0;
         background-color: rgba(33, 36, 38, 0.8);
         text-align: center;
     }
-
     header ul {
         padding: 0.33% 0;
         background-color: rgba(33, 36, 38, 0.8);
@@ -53,39 +64,107 @@
         justify-content: space-evenly;
         overflow: visible;
     }
-
     nav li {
         list-style: none;
         display: inline-block;
         font-family: 'gameboy';
         color: silver;
-        font-size: 1.25rem;
+        font-size: 2.5vw;
     }
 
+
     main {
+        grid-area: main;
         padding-left: 3vw;
         padding-right: 3vw;
         font-family: 'rounded';
     }
-    main h1 {
-        font-weight: bold;
-    }
     main p {
         text-align: justify;
     }
+    main h1 {
+        font-size: 5vw;
+    }
+    main h2 {
+        font-size: 4.5vw;
+    }
+
 
     a {
         color: #ffcd00;
     }
-
     a:hover {
         color: #356abc;
     }
-
     a:active {
         color: white;
     }
 
+
+    #posts, #futuros {
+        background-color: rgba(26, 28, 31, 0.8);
+        padding: 5%;
+        display: flex;
+        justify-content: space-between;
+    }
+    #posts article, #futuros article {
+        width: 22vw;
+        height: 28vw;
+
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+            "thumb"
+            "name";
+    }
+    article img {
+        grid-area: "thumb";
+        width: 22vw;
+        height: 17vw;
+        border: 3px solid silver;
+        display: block;
+        margin: auto;
+    }
+    article p {
+        grid-area: "name";
+        margin: auto;
+        text-align: center;
+        font-size: 2.1vw;
+    }
+    #futuros {
+        color: silver;
+    }
+
+
+    footer {
+        grid-area: footer;
+        margin-top: 5%;
+        padding: 1.2%;
+        background-color: rgba(24, 25, 27, 0.8);
+        font-family: "rounded";
+        display: flex;
+        font-size: 3vw;
+    }
+    footer img {
+        width: 10vw;
+        height: 10vw;
+        align-self: center;
+    }
+    footer p {
+        padding: 0 5%;
+    }
+
+
+    #secret {
+        position: fixed;
+        right: 4%;
+        bottom: 5%;
+        font-size: 5vw;
+        font-family: "unown";
+
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0);
+    }
 
     /* Pages */
     #main {
@@ -94,6 +173,10 @@
         background-size: cover;
         background-position: center;
         color: white;
+    }
+    #main main ul {
+        list-style-position: inside;
+        padding-left: 3vw;
     }
 
 
@@ -112,7 +195,7 @@
         background-color: rgba(255, 255, 255, 0.5);
     }
     #mundo td {
-        width: 30vw;
+        width: 80vw;
         padding: 1.33% 1.33%;
         text-align: center;
         border: 0.2vw solid rgba(255, 255, 255, 0.5);
@@ -126,40 +209,114 @@
         width: 27vw;
         display: block;
         margin: auto;
+    }
+
+
+    #unova {
+        background-image: url(img/unova_fundo.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color: white; 
+    }
+    #unova main {
+        display: grid;
+        grid-template-areas: 
+        "titulo"
+        "exemplo"
+        "texto"
+        "video";
+    }
+    #unova h1 {
+        grid-area: titulo;
+    }
+    #unova #texto {
+        grid-area: texto;
+    }
+    #unova iframe {
+        margin: auto;
+        display: block;
+        margin-top: 5%;
+        width: 80vw;
+        height: 50vw;
+        grid-area: video;
+    }
+    #unova #hypno {
+        margin: auto;
+        text-align: center;
+        width: 80vw;
+        grid-area: exemplo;
+    }
+    #unova #hypno img {
+        width: 80vw;
+        margin: auto;
+        display: block;
+        text-align: center;
+    }
+
+
+    #unown {
+        font-family: "unown";
+        background-image: url(img/weird.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        color: white;
+        margin-bottom: 500px;
+        font-size: 150%;
+    }
+    #unown h1, #unown p {
+        padding: 0 8%;
+    }
+
+
+    #biohazard img {
+        max-width: 50vw;
+        margin: auto;
+        display: block;
+        padding: 2% 0;
+    }
+    #biohazard ul {
+        padding-left: 3vw;
     }
 }
 
 
 
 /* Computador */
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 600px) {
     /* Geral */
     body {
         /* margin: 30px 180px */
         margin: 2% 12%; 
         background-color: rgb(40, 40, 40, 0.8);
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
     }
 
+
     header {
+        grid-area: header;
         padding-top: 1.2%;
         background-color: rgba(24, 25, 27, 0.8);
     }
-
     header img {
         display: block;
         margin: auto;
         width: 33%;
     }
-
     header p {
         font-family: 'gameboy';
         color: silver;
-        font-size: 1.25rem;
+        font-size: 1.5vw;
         padding: 0.33% 0;
         background-color: rgba(33, 36, 38, 0.8);
         text-align: center;
     }
-
     header ul {
         padding: 0.33% 0;
         background-color: rgba(33, 36, 38, 0.8);
@@ -167,39 +324,102 @@
         justify-content: space-evenly;
         overflow: visible;
     }
-
     nav li {
         list-style: none;
         display: inline-block;
         font-family: 'gameboy';
         color: silver;
-        font-size: 1.25rem;
+        font-size: 1.5vw;
     }
 
+
     main {
+        grid-area: main;
         padding-left: 3vw;
         padding-right: 3vw;
         font-family: 'rounded';
-    }
-    main h1 {
-        font-weight: bold;
     }
     main p {
         text-align: justify;
     }
 
+
     a {
         color: #ffcd00;
     }
-
     a:hover {
         color: #356abc;
     }
-
     a:active {
         color: white;
     }
 
+
+    #posts, #futuros {
+        background-color: rgba(26, 28, 31, 0.8);
+        padding: 5%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #posts article, #futuros article {
+        width: 25%;
+        height: 20%;
+
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 1fr 1;
+        grid-template-rows: 1fr 1;
+        grid-template-areas:
+            "thumb"
+            "name";
+    }
+    article img {
+        grid-area: "thumb";
+        width: 15vw;
+        height: 10vw;
+        border: 5px solid silver;
+        display: block;
+        margin: auto;
+    }
+    article p {
+        grid-area: "name";
+        margin: auto;
+        text-align: center;
+        font-size: 1vw;
+    }
+    #futuros {
+        color: silver;
+    }
+
+
+    footer {
+        grid-area: footer;
+        margin-top: 5%;
+        padding: 1.2%;
+        background-color: rgba(24, 25, 27, 0.8);
+        font-family: "rounded";
+        display: flex;
+    }
+    footer img {
+        width: 10vw;
+        height: 10vw;
+        align-self: center;
+    }
+    footer p {
+        padding: 0 5%;
+    }
+
+
+    #secret {
+        position: fixed;
+        right: 4%;
+        bottom: 5%;
+        font-size: 5vw;
+        font-family: "unown";
+
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0);
+    }
 
     /* Pages */
     #main {
@@ -241,83 +461,50 @@
         display: block;
         margin: auto;
     }
-}
 
 
-
-
-
-
-/* Mobile
-@media only screen and (max-width: 600px) {
-    body {
-        margin: 2% 12%;
-        background-color: rgb(40, 40, 40, 0.8);
-    }
-
-    header {
-        padding-top: 18px;
-        background-color: rgba(24, 25, 27, 0.8);
-    }
-
-    header img {
-        display: block;
-        margin: auto;
-    }
-
-    header ul {
-        padding: 5px 0;
-        background-color: rgba(33, 36, 38, 0.8);
-        display: flex;
-        justify-content: space-evenly;
-        overflow: visible;
-    }
-
-    header p {
-        font-family: 'gameboy';
-        color: silver;
-        font-size: 20x;
-        padding: 5px 0;
-        background-color: rgba(33, 36, 38, 0.8);
-        text-align: center;
-    }
-
-    nav li {
-        list-style: none;
-        display: inline-block;
-        font-family: 'gameboy';
-        color: silver;
-        font-size: 20x;
-    }
-
-    main {
-        padding-left: 30px;
-        padding-right: 30px;
-        font-family: 'rounded';
-    }
-    main h1 {
-        font-weight: bold;
-    }
-
-
-    a {
-        color: #ffcd00;
-    }
-
-    a:hover {
-        color: #356abc;
-    }
-
-    a:active {
-        color: white;
-    }
-
-
-
-    #index {
-        background-image: url(img/pikachu.jpg);
+    #unova {
+        background-image: url(img/unova_fundo.png);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
         color: white;
     }
-} */
+    #unova iframe {
+        margin: auto;
+        display: block;
+        margin-top: 5%;
+        width: 50vw;
+        height: 28vw;
+    }
+    #unova #hypno {
+        float: right;
+        text-align: center;
+        width: 15vw;
+        padding-left: 7%;
+        padding-top: 5%;
+    }
+    #unova #hypno img {
+        width: 15vw;
+    }
+
+
+    #unown {
+        font-family: "unown";
+        background-image: url(img/weird.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        color: white;
+        margin-bottom: 500px;
+        font-size: 200%;
+    }
+
+
+    #biohazard img {
+        max-width: 50vw;
+        margin: auto;
+        display: block;
+        padding: 2% 0;
+    }
+}
