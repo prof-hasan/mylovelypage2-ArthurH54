@@ -109,7 +109,7 @@
     }
     #posts article, #futuros article {
         width: 22vw;
-        height: 28vw;
+        height: 38vw;
 
         display: grid;
         gap: 10px;
@@ -118,7 +118,7 @@
             "name";
     }
     article img {
-        grid-area: "thumb";
+        grid-area: thumb;
         width: 22vw;
         height: 17vw;
         border: 3px solid silver;
@@ -126,10 +126,10 @@
         margin: auto;
     }
     article p {
-        grid-area: "name";
+        grid-area: name;
         margin: auto;
         text-align: center;
-        font-size: 2.1vw;
+        font-size: 3vw;
     }
     #futuros {
         color: silver;
@@ -167,7 +167,7 @@
     }
 
     /* Pages */
-    #main {
+    #main, #biohazard {
         background-image: url(img/main_fundo.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -374,7 +374,7 @@
             "name";
     }
     article img {
-        grid-area: "thumb";
+        grid-area: thumb;
         width: 15vw;
         height: 10vw;
         border: 5px solid silver;
@@ -382,7 +382,7 @@
         margin: auto;
     }
     article p {
-        grid-area: "name";
+        grid-area: name;
         margin: auto;
         text-align: center;
         font-size: 1vw;
@@ -422,7 +422,7 @@
     }
 
     /* Pages */
-    #main {
+    #main, #biohazard {
         background-image: url(img/main_fundo.jpg);
         background-repeat: no-repeat;
         background-size: cover;
